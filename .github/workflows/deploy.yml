@@ -23,7 +23,8 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Build the Shinylive site
         run: |
-          shinylive export --template-dir template --template-params '{"title": "MapLibre Getting Started"}' getting-started dist
+          shinylive export getting-started dist
+          # shinylive export --template-dir template --template-params '{"title": "MapLibre Getting Started"}' getting-started dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
