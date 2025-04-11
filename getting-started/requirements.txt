@@ -1,0 +1,4 @@
+maplibre[shiny]
+pydantic
+jinja2
+
