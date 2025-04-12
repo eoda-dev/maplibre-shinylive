@@ -1,4 +1,4 @@
-# MapLibre Shinylive
+# MapLibre for Python Shinylive Example Apps
 
 Deploy locally:
 
@@ -7,15 +7,12 @@ uv sync
 
 source .venv/bin/activate
 
-shinylive export \
-	--subdir getting-started \
-	--template-dir templates/app \
-	--template-params '{"title": "MapLibre Getting Started"}' \
-	--verbose \
-	getting-started dist
+# Export shinylive apps
+python ./scripts/deploy.py export 
 
-python ./scripts/rendersite.py > dist/index.html
+# Render main 'index.html'
+python ./scripts/deploy.py render > dist/index.html '
 
+# Serve site
 python -m http.server --directory dist --bind localhost 8008
 ```
-
