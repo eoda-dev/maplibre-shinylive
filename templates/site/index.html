@@ -24,7 +24,8 @@
 		<ul>
 			<!-- <li><a href="getting-started/edit">Getting started</a></li> -->
 			{%- for link in links %}
-			<li><a href="{{ link.href }}/edit" target="_blank">{{ link.text }}</a></li>
+			<li><a href="{{ link.href }}/?_shinylive-mode=editor-terminal-viewer" target="_blank">{{ link.text }}</a>
+			</li>
 			{%- endfor %}
 		</ul>
 	</div>
