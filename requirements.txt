@@ -1,4 +1,6 @@
 maplibre[shiny]>=0.3.1
 shiny>=1.4.0
 shinylive>=0.8.3
-
+typer
+pydantic>=2.11.3
+jinja2
