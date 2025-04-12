@@ -1,0 +1,10 @@
+---
+title: MapLibre Shinylive
+format:
+   html:
+      theme: united
+      embed-resources: true
+---
+
+[Some link](getting-started/edit)
+

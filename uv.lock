@@ -186,14 +186,18 @@ name = "maplibre-shinylive"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "jinja2" },
     { name = "maplibre", extra = ["shiny"] },
+    { name = "pydantic" },
     { name = "shiny" },
     { name = "shinylive" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "jinja2", specifier = ">=3.1.6" },
     { name = "maplibre", extras = ["shiny"], specifier = ">=0.3.1" },
+    { name = "pydantic", specifier = ">=2.11.3" },
     { name = "shiny", specifier = ">=1.4.0" },
     { name = "shinylive", specifier = ">=0.8.3" },
 ]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{ title }}</title>
+	<style>
+		body {
+			font-family: Ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+		}
+
+		#root {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root">
+		<h1>{{ title }}</h1>
+		<h2>Shinylive</h2>
+		<ul>
+			<!-- <li><a href="getting-started/edit">Getting started</a></li> -->
+			{%- for link in links %}
+			<li><a href="{{ link.href }}/edit" target="_blank">{{ link.text }}</a></li>
+			{%- endfor %}
+		</ul>
+	</div>
+</body>
+
+</html>
