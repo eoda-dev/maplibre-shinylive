@@ -1,4 +1,7 @@
 [site]
 title = "MapLibre for Python"
 subtitle = "Shinylive"
-apps = [{ title = "Getting Started", dir = "getting-started" }]
+apps = [
+    { title = "Getting Started", dir = "getting-started" },
+    { title = "Raster Tile Source", dir = "raster-tile-source" },
+]
