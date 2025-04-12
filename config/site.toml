@@ -1,0 +1,3 @@
+[site]
+title = "MapLibre for Python"
+apps = [{ title = "Getting Started", dir = "getting-started" }]

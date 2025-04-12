@@ -10,4 +10,5 @@ dependencies = [
     "pydantic>=2.11.3",
     "shiny>=1.4.0",
     "shinylive>=0.8.3",
+    "typer>=0.15.2",
 ]

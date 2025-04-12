@@ -19,12 +19,12 @@
 
 <body>
 	<div id="root">
-		<h1>{{ title }}</h1>
-		<h2>Shinylive</h2>
+		<h1>{{ title | default('MapLibre for Python') }}</h1>
+		<h2>{{ subtitle | default('Shinylive') }}</h2>
 		<ul>
 			<!-- <li><a href="getting-started/edit">Getting started</a></li> -->
-			{%- for link in links %}
-			<li><a href="{{ link.href }}/?_shinylive-mode=editor-terminal-viewer" target="_blank">{{ link.text }}</a>
+			{%- for app in apps %}
+			<li><a href="{{ app.dir }}/?_shinylive-mode=editor-terminal-viewer" target="_blank">{{ app.title }}</a>
 			</li>
 			{%- endfor %}
 		</ul>
