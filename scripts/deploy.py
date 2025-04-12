@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-import sys
+import json
+import subprocess
 import tomllib
 
 import typer
@@ -17,7 +18,8 @@ class App(BaseModel):
 
 class Site(BaseModel):
     title: str = "MapLibre for Python"
-    apps: list[App] = [App(title="Getting started", dir="getting-started")]
+    subtitle: str = "Shinylive"
+    apps: list[App]  # = [App(title="Getting started", dir="getting-started")]
 
     @classmethod
     def read_config(cls, filename: str) -> Site:
@@ -39,6 +41,29 @@ def render(
 ) -> None:
     site = Site.read_config(config)
     print(site.render(input))
+
+
+@app.command(help="Export apps")
+def export(config: str = "config/site.toml") -> None:
+    site = Site.read_config(config)
+    print(site)
+    for app in site.apps:
+        cmd = [
+            "shinylive",
+            "export",
+            "--subdir",
+            app.dir,
+            "--template-dir",
+            "templates/app",
+            "--template-params",
+            json.dumps(dict(title=app.title)),
+            app.dir,
+            "dist",
+        ]
+        # print(cmd)
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        print(result.args)
+        print(result.stderr)
 
 
 if __name__ == "__main__":

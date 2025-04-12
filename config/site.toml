@@ -1,3 +1,4 @@
 [site]
 title = "MapLibre for Python"
+subtitle = "Shinylive"
 apps = [{ title = "Getting Started", dir = "getting-started" }]

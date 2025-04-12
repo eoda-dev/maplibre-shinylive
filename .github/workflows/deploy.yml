@@ -24,8 +24,9 @@ jobs:
       - name: Build the Shinylive site
         run: |
           # shinylive export getting-started dist
-          shinylive export --subdir getting-started --template-dir templates/app --template-params '{"title": "MapLibre for Python Getting Started"}' getting-started dist
-          python ./scripts/rendersite.py > dist/index.html
+          # shinylive export --subdir getting-started --template-dir templates/app --template-params '{"title": "MapLibre for Python Getting Started"}' getting-started dist
+          python ./scripts/deploy.py export
+          python ./scripts/deploy.py render > dist/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
