@@ -3,10 +3,13 @@ from __future__ import annotations
 import json
 import subprocess
 import tomllib
+from pathlib import Path
 
 import typer
 from jinja2 import Template
 from pydantic import BaseModel
+
+APPS_ROOT = Path("apps")
 
 app = typer.Typer()
 
@@ -57,7 +60,7 @@ def export(config: str = "config/site.toml") -> None:
             "templates/app",
             "--template-params",
             json.dumps(dict(title=app.title)),
-            app.dir,
+            APPS_ROOT / app.dir,
             "dist",
         ]
         # print(cmd)

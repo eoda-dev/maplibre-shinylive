@@ -1,3 +1,5 @@
+# Shiny Express
+
 from maplibre import Layer, LayerType, Map, MapLibreRenderer, MapOptions
 from maplibre.basemaps import OpenFreeMap
 from maplibre.controls import GlobeControl, NavigationControl

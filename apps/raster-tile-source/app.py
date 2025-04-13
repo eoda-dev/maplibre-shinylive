@@ -1,5 +1,7 @@
+# Shiny Express
+
 from maplibre import Layer, LayerType, Map, MapLibreRenderer, MapOptions
-from maplibre.basemaps import background, construct_basemap_style
+from maplibre.basemaps import construct_basemap_style
 from maplibre.controls import GlobeControl, NavigationControl
 from maplibre.sources import RasterTileSource
 from shiny import reactive

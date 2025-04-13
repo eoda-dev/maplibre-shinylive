@@ -16,3 +16,9 @@ python ./scripts/deploy.py render > dist/index.html '
 # Serve site
 python -m http.server --directory dist --bind localhost 8008
 ```
+
+Run apps locally without deployment:
+
+```bash
+shiny run apps/getting-started/app.py
+```
